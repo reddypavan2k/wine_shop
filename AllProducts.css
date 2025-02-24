@@ -1,0 +1,152 @@
+/* General Page Styling */
+.all-products-page {
+  padding: 20px;
+  font-family: 'Roboto', Arial, sans-serif; 
+}
+
+.all-products-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 30px;
+  justify-content: center; /* Center align filters */
+  margin-bottom: 30px;
+}
+
+.filter-dropdown {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease;
+  width: 200px; /* Consistent width for dropdowns */
+}
+
+.filter-dropdown:hover,
+.filter-dropdown:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add hover/focus effect */
+  outline: none;
+}
+
+/* Product List Container */
+.all-products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Individual Product Card */
+.DrinkItem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  width: 280px; /* Slightly wider for better spacing */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.DrinkItem:hover {
+  transform: translateY(-8px); /* More noticeable lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+/* Product Image */
+.DrinkItem img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Product Name */
+.DrinkItem h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Product Description */
+.DrinkItem p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Product Price */
+.DrinkItem .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a9d8f;
+  margin-bottom: 15px;
+}
+
+
+.DrinkItem button:hover {
+  background-color: #21867a;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .filter-dropdown {
+      width: 100%; /* Full width for smaller screens */
+  }
+
+  .DrinkItem {
+      width: 90%; /* Adjust product card width */
+      margin: 0 auto; /* Center-align on mobile */
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #21867a;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #333;
+}
