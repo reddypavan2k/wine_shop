@@ -1,0 +1,154 @@
+/* Navbar */
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 75px;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: black;
+  font-size: 20px; /* Increased base font size */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px; /* Increased font size */
+}
+
+.navbar-menu li a.active {
+  border-bottom: 1px solid black;
+}
+
+/* Navbar right icons and Sign In button */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between the icons and the sign-in button */
+}
+
+/* Search Icon */
+.search-icon {
+  font-size: 26px; /* Increased font size */
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.search-icon:hover {
+  color: tomato;
+}
+
+/* Search Input container */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+/* Input field */
+.search-container input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px; /* Increased font size */
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Input field focus */
+.search-container input:focus {
+  border: 2px solid black;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+  padding: 12px 30px; /* Slightly larger padding */
+  font-size: 18px; /* Increased font size */
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.sign-in-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #feb47b, #ff7e5f); /* Reversed gradient */
+}
+
+.sign-in-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar-menu {
+    font-size: 18px; /* Adjusted font size for medium screens */
+  }
+  .navbar-icons {
+    gap: 15px;
+  }
+  .sign-in-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar-menu {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+  }
+  .navbar-icons {
+    gap: 10px;
+  }
+  .sign-in-btn {
+    padding: 8px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sign-in-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
